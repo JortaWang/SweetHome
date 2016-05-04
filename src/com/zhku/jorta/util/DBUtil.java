@@ -27,8 +27,8 @@ public class DBUtil{
 		InputStream is = DBUtil.class.getClassLoader().getResourceAsStream("c3p0.properties");
 		try {
 			properties.load(is);
-		} catch (Exception ex) {
-			logger.error("找不到c3p0的配置文件！",ex);
+		} catch (Exception e) {
+			logger.error("找不到c3p0的配置文件！",e);
 			throw new Error("系统出错！");
 		}
 
